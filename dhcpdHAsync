@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# script triggered by incron after dhcpd.conf.shared modification.
+
+LOCALCONF="/etc/dhcp/dhcpd.conf"
+SHAREDCONF="/etc/dhcp/dhcpd.conf.shared"
+PEER="$(sed -n '/peer address/p' $LOCALCONF|awk '{print $3}'|tr -d ';')"
+
+# reload DHCP server
+service isc-dhcp-server force-reload
+
+# sync shared DHCP server conf file on the PEER node.
+rsync -a ${SHAREDCONF} ${PEER}:${SHAREDCONF}
