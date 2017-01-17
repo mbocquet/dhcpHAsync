@@ -1,5 +1,5 @@
 'dhcpHAsync'. Keeps ISC-DHCP daemon HA config in sync between two nodes.
-Copyright © 2015 Mathias Bocquet (mbocquet@sekoya.org)
+Copyright © 2015-2017 Mathias Bocquet (mbocquet@sekoya.org)
 
 This file is part of 'dhcpHAsync'.
 
