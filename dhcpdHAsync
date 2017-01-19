@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # 'dhcpHAsync'. Keeps ISC-DHCP daemon HA config in sync between two nodes.
-# Copyright © 2015 Mathias Bocquet (mbocquet@sekoya.org)
+# Copyright © 2015-2017 Mathias Bocquet (mbocquet@sekoya.org)
 
 # script triggered by incron after dhcpd.conf.shared modification.
 
